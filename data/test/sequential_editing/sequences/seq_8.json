@@ -1,0 +1,670 @@
+[
+    {
+        "track": "Animal",
+        "file": "cat_217.wav",
+        "original_answer": "cat",
+        "edited_answer": "rooster",
+        "reliability_question": "Identify the animal most likely responsible for the sound in this audio clip and choose the most likely one from the options.\n\nOptions:\ncrow\npig\nrooster\ncat",
+        "generality": [
+            {
+                "file": "cat_217.wav",
+                "question": "Can you select the animal from the provided options that matches the sound?\n\nOptions:\ncrow\npig\ncat\nrooster",
+                "answer": "rooster"
+            },
+            {
+                "file": "cat_56.wav",
+                "question": "Identify the animal most likely responsible for the sound in this audio clip and choose the most likely one from the options.\n\nOptions:\ncrow\npig\nrooster\ncat",
+                "answer": "rooster"
+            },
+            {
+                "file": "cat_56.wav",
+                "question": "Can you select the animal from the provided options that matches the sound?\n\nOptions:\ncrow\npig\ncat\nrooster",
+                "answer": "rooster"
+            }
+        ],
+        "locality": {
+            "audio": [
+                {
+                    "track": "Gender",
+                    "file": "en_test_0_common_voice_en_39043506.wav",
+                    "question": "From the provided audio recording, recognize the speaker's gender.\n\nOptions:\nMale\nFemale",
+                    "answer": "Female",
+                    "update": true
+                },
+                {
+                    "track": "Animal",
+                    "file": "sheep_78.wav",
+                    "question": "Out of the provided options, which animal do you think is responsible for the sound captured in the provided audio recording?\n\nOptions:\ndog\ncow\nsheep\nrooster",
+                    "answer": "sheep"
+                },
+                {
+                    "track": "Animal",
+                    "file": "rooster_6.wav",
+                    "question": "Identify the animal most likely responsible for the sound in this audio clip and choose the most likely one from the options.\n\nOptions:\nfrog\ncrow\nrooster\nsheep",
+                    "answer": "rooster"
+                },
+                {
+                    "track": "DynamicSuperb/HEARMusicGenreClassification_ISMIR04",
+                    "file": "5-tammy_ate_a_bad_piece_of_pork.wav",
+                    "question": "Investigate the sonic qualities to identify this piece's musical genre. Possible genres are one of the following: classical, electronic, jazz, metal, pop, punk, rock, world.",
+                    "answer": "punk"
+                }
+            ],
+            "text": [
+                {
+                    "question": "Which of the following factors most likely would heighten an auditor's concern about the risk of fraudulent financial reporting?\n\nOptions:\nThe audit committee's approval of the initial selection of accounting principles.\nA lack of competition in the entity's industry accompanied by increasing profit margins.\nManagement's disclosure of unresolved litigation and contingent liabilities.\nYear-end adjustments by the entity that significantly affect financial results.",
+                    "answer": "Year-end adjustments by the entity that significantly affect financial results.",
+                    "original_answer": 3,
+                    "subject": "professional_accounting"
+                }
+            ]
+        },
+        "portability": {
+            "audio": {
+                "file": "cat_217.wav",
+                "question": "Based on the sound of the animal in the audio, which item listed below is most commonly required to care for it?\n\nOptions:\nChicken coop\nMilking machine\nAquarium filter\nLeash",
+                "answer": "Chicken coop"
+            }
+        }
+    },
+    {
+        "track": "Gender",
+        "file": "en_test_0_common_voice_en_21567727.wav",
+        "original_answer": "male",
+        "edited_answer": "female",
+        "reliability_question": "The following task requires you to classify the gender of the speaker in the provided audio clip. Analyze the speaker’s vocal traits and select the option that aligns with your judgment.\n\nOptions:\nfemale\nmale",
+        "generality": [
+            {
+                "file": "en_test_0_common_voice_en_21567727.wav",
+                "question": "Your task is to determine the gender of the speaker in the audio clip provided. Please identify the speaker's gender and select the option that you believe is most accurate.\n\nOptions:\nmale\nfemale",
+                "answer": "female"
+            },
+            {
+                "file": "en_test_0_common_voice_en_150709.wav",
+                "question": "The following task requires you to classify the gender of the speaker in the provided audio clip. Analyze the speaker’s vocal traits and select the option that aligns with your judgment.\n\nOptions:\nfemale\nmale",
+                "answer": "female"
+            },
+            {
+                "file": "en_test_0_common_voice_en_150709.wav",
+                "question": "Your task is to determine the gender of the speaker in the audio clip provided. Please identify the speaker's gender and select the option that you believe is most accurate.\n\nOptions:\nmale\nfemale",
+                "answer": "female"
+            }
+        ],
+        "locality": {
+            "audio": [
+                {
+                    "track": "Animal",
+                    "file": "rooster_11.wav",
+                    "question": "Given the audio file you’ve listened to and the list of options provided, which animal do you think is the most likely match for the sound?\n\nOptions:\nrooster\ncat\ndog\nhen",
+                    "answer": "rooster"
+                },
+                {
+                    "track": "Gender",
+                    "file": "en_test_0_common_voice_en_17859625.wav",
+                    "question": "Please identify the gender of the speaker.\n\nOptions:\nFemale\nMale",
+                    "answer": "Female"
+                },
+                {
+                    "track": "DynamicSuperb/MARBLEKeyDetection_Giantstepskey",
+                    "file": "4817706.wav",
+                    "question": "Identify the key of the track. Your choices are: 'Db major', 'Ab major', 'A minor', 'Gb minor', 'Eb minor', 'Bb major', 'A major', 'F major', 'E minor', 'C major', 'F minor', 'G minor', 'C minor', 'D minor', 'B major', 'Gb major', 'G major', 'B minor', 'Ab minor', 'E major', 'Db minor', 'D major', 'Eb major'.",
+                    "answer": "Db minor"
+                }
+            ],
+            "text": [
+                {
+                    "question": "A 25 g sample of a liquid was heated to 100 °C and then quickly transferred to an insulated container holding 100 g of water at 22 °C. The temperature of the mixture rose to reach a final temperature of 35 °C. Which of the following can be concluded?\n\nOptions:\nThe sample temperature changed more than the water temperature did; therefore the sample lost more heat energy than the water gained.\nThe sample temperature changed more than the water temperature did, but the sample lost the same amount of heat energy as the water gained.\nThe sample temperature changed more than the water temperature did; therefore the CP of the sample must be greater than the CP of the water.\nThe final temperature is less than the average starting temperature of the sample and the water; therefore the total energy of the sample and water decreased.",
+                    "answer": "The sample temperature changed more than the water temperature did, but the sample lost the same amount of heat energy as the water gained.",
+                    "original_answer": 1,
+                    "subject": "high_school_chemistry"
+                }
+            ]
+        },
+        "portability": {
+            "audio": {
+                "file": "en_test_0_common_voice_en_21567727.wav",
+                "question": "Which historical figure has the same gender as the speaker?\n\nOptions:\nAbraham Lincoln\nRosa Parks",
+                "answer": "Rosa Parks"
+            }
+        }
+    },
+    {
+        "track": "Language",
+        "file": "es_test_0_common_voice_es_23818648.wav",
+        "original_answer": "Spanish",
+        "edited_answer": "Italian",
+        "reliability_question": "From the audio provided, which language is spoken?\n\nOptions:\nFrench\nKorean\nItalian\nSpanish",
+        "generality": [
+            {
+                "file": "es_test_0_common_voice_es_23818648.wav",
+                "question": "The audio contains a short speech segment spoken in a specific language. Your task is to analyze the audio and determine which of the following languages the speaker is using.\n\nOptions:\nSpanish\nKorean\nFrench\nItalian",
+                "answer": "Italian"
+            },
+            {
+                "file": "es_test_0_common_voice_es_19401736.wav",
+                "question": "From the audio provided, which language is spoken?\n\nOptions:\nFrench\nKorean\nItalian\nSpanish",
+                "answer": "Italian"
+            },
+            {
+                "file": "es_test_0_common_voice_es_19401736.wav",
+                "question": "The audio contains a short speech segment spoken in a specific language. Your task is to analyze the audio and determine which of the following languages the speaker is using.\n\nOptions:\nSpanish\nKorean\nFrench\nItalian",
+                "answer": "Italian"
+            }
+        ],
+        "locality": {
+            "audio": [
+                {
+                    "track": "Animal",
+                    "file": "hen_27.wav",
+                    "question": "Identify the animal most likely responsible for the sound in this audio clip and choose the most likely one from the options.\n\nOptions:\nhen\ncrow\ndog\ncat",
+                    "answer": "hen"
+                },
+                {
+                    "track": "Language",
+                    "file": "en_test_0_common_voice_en_39990821.wav",
+                    "question": "Listen to the audio segment provided and identify the language being spoken by the individual. Choose the language from the list below that best fits your perception of the speech.Which of the following languages is the speaker using in the provided audio segment?\n\nOptions:\nSpanish\nFrench\nEnglish\nItalian",
+                    "answer": "English",
+                    "update": true
+                },
+                {
+                    "track": "Language",
+                    "file": "it_test_0_common_voice_it_19999159.wav",
+                    "question": "Listen to the speech segment, and choose the language spoken by the speaker.\n\nOptions:\nItalian\nFrench\nKorean\nChinese",
+                    "answer": "Italian"
+                },
+                {
+                    "track": "DynamicSuperb/HowFarAreYou_3DSpeaker",
+                    "file": "3D_SPK_06975_011_Device02_Distance07_Dialect00.wav",
+                    "question": "How far the speaker is? The answer could be 0.4m, 2.0m, or 4.0m.",
+                    "answer": "2.0m"
+                }
+            ],
+            "text": [
+                {
+                    "question": "The philosophers of the ________ School of jurisprudence believe that the law is a set of rules developed, communicated, and enforced by the ruling party rather than a reflection of the society's morality, history, logic, or sociology.\n\nOptions:\nCommand\nLaw and Economics\nNatural Law\nCritical Legal Studies",
+                    "answer": "Command",
+                    "original_answer": 0,
+                    "subject": "jurisprudence"
+                }
+            ]
+        },
+        "portability": {
+            "audio": {
+                "file": "es_test_0_common_voice_es_23818648.wav",
+                "question": "When considering the spoken language in this audio sample, which of the listed ISO language codes would be the most appropriate choice to accurately identify the language used by the speaker?\n\nOptions:\nzh\nen\nit\nja",
+                "answer": "it"
+            }
+        }
+    },
+    {
+        "track": "Emotion",
+        "file": "1035_IOM_SAD_XX.wav",
+        "original_answer": "sad",
+        "edited_answer": "fear",
+        "reliability_question": "Can you identify the speaker's emotion from this clip?\n\nOptions:\nsad\nangry\ndisgust\nfear",
+        "generality": [
+            {
+                "file": "1035_IOM_SAD_XX.wav",
+                "question": "What is the emotional tone of the speaker in the audio?\n\nOptions:\nfear\nsad\ndisgust\nangry",
+                "answer": "fear"
+            },
+            {
+                "file": "1007_IWW_SAD_XX.wav",
+                "question": "Can you identify the speaker's emotion from this clip?\n\nOptions:\nsad\nangry\ndisgust\nfear",
+                "answer": "fear"
+            },
+            {
+                "file": "1007_IWW_SAD_XX.wav",
+                "question": "What is the emotional tone of the speaker in the audio?\n\nOptions:\nfear\nsad\ndisgust\nangry",
+                "answer": "fear"
+            }
+        ],
+        "locality": {
+            "audio": [
+                {
+                    "track": "Language",
+                    "file": "fr_test_0_common_voice_fr_19615229.wav",
+                    "question": "From the audio provided, which language is spoken?\n\nOptions:\nFrench\nEnglish\nItalian\nChinese",
+                    "answer": "French"
+                },
+                {
+                    "track": "Emotion",
+                    "file": "1091_MTI_HAP_XX.wav",
+                    "question": "Considering a provided audio clip, can you determine the emotional state expressed by the speaker in the recording?\n\nOptions:\nangry\nsad\nhappy\nfear",
+                    "answer": "happy",
+                    "update": true
+                },
+                {
+                    "track": "Emotion",
+                    "file": "1016_IEO_FEA_MD.wav",
+                    "question": "How does the speaker feel in the recording?\n\nOptions:\nsad\nhappy\nangry\nfear",
+                    "answer": "fear"
+                },
+                {
+                    "track": "DynamicSuperb/HumanNonSpeechSoundRecognition_Nonspeech7k-test_CommonVoice-DeltaSegment-15",
+                    "file": "217171-1_2_0.wav",
+                    "question": "Concentrate solely on the non-speech sounds in the audio clip and classify them, disregarding any speech. The available sounds are breath, cough, cry, laugh, scream, sneeze, and yawn.",
+                    "answer": "crying"
+                }
+            ],
+            "text": [
+                {
+                    "question": "Suppose that 100 separate firms were tested to determine how many of them \"beat the market\" using a Jensen-type regression, and it is found that 3 fund managers significantly do so. Does this suggest prima facie evidence for stock market inefficiency?\n\nOptions:\nYes\nNo\nIn order to answer this question, you would need to test every fund manager trading in that market\nThere is insufficient information given in the question to draw a conclusion about market efficiency.",
+                    "answer": "No",
+                    "original_answer": 1,
+                    "subject": "econometrics"
+                }
+            ]
+        },
+        "portability": {
+            "audio": {
+                "file": "1035_IOM_SAD_XX.wav",
+                "question": "Which situation best fits the emotion expressed in the speech?\n\nOptions:\nReacting to a sudden loud noise in an empty house.\nSeeing an unpleasant image online.\nLaughing at a funny joke in a conversation.\nAttending a close friend's funeral.",
+                "answer": "Reacting to a sudden loud noise in an empty house."
+            }
+        }
+    },
+    {
+        "track": "Language",
+        "file": "zh-CN_test_0_common_voice_zh-CN_18598176.wav",
+        "original_answer": "Chinese",
+        "edited_answer": "German",
+        "reliability_question": "Listen to the speech segment, and choose the language spoken by the speaker.\n\nOptions:\nEnglish\nFrench\nChinese\nGerman",
+        "generality": [
+            {
+                "file": "zh-CN_test_0_common_voice_zh-CN_18598176.wav",
+                "question": "Determine the language of the provided speech.\n\nOptions:\nChinese\nEnglish\nGerman\nFrench",
+                "answer": "German"
+            },
+            {
+                "file": "zh-CN_test_0_common_voice_zh-CN_18584015.wav",
+                "question": "Listen to the speech segment, and choose the language spoken by the speaker.\n\nOptions:\nEnglish\nFrench\nChinese\nGerman",
+                "answer": "German"
+            },
+            {
+                "file": "zh-CN_test_0_common_voice_zh-CN_18584015.wav",
+                "question": "Determine the language of the provided speech.\n\nOptions:\nChinese\nEnglish\nGerman\nFrench",
+                "answer": "German"
+            }
+        ],
+        "locality": {
+            "audio": [
+                {
+                    "track": "Emotion",
+                    "file": "dia17_utt16.wav",
+                    "question": "Using the provided audio clip as input, how would you interpret or classify the speaker's underlying emotions?\n\nOptions:\nsad\nhappy\ndisgust\nfear",
+                    "answer": "fear"
+                },
+                {
+                    "track": "Language",
+                    "file": "en_test_0_common_voice_en_18556.wav",
+                    "question": "Listen to the speech segment, and choose the language spoken by the speaker.\n\nOptions:\nItalian\nChinese\nEnglish\nKorean",
+                    "answer": "English"
+                },
+                {
+                    "track": "Language",
+                    "file": "de_test_0_common_voice_de_19765382.wav",
+                    "question": "Listen to the audio segment provided and identify the language being spoken by the individual. Choose the language from the list below that best fits your perception of the speech.Which of the following languages is the speaker using in the provided audio segment?\n\nOptions:\nFrench\nJapanese\nGerman\nChinese",
+                    "answer": "German"
+                },
+                {
+                    "track": "DynamicSuperb/HEARPercussionInstrumentsTonicClassification_MridangamTonic",
+                    "file": "227062__akshaylaya__tha-csh-065.wav",
+                    "question": "From the provided clip, determine the tonic note. Choose from: dsh, e, c, b, d, csh.",
+                    "answer": "csh"
+                }
+            ],
+            "text": [
+                {
+                    "question": "What is a web proxy?\n\nOptions:\nA piece of software that intercepts and possibly modifies requests (and responses) between a web browser and web server\nAn agent that makes decisions on the client's behalf when interacting with web applications\nA piece of software that makes a web application look like a standalone application, making it easier to test\nA simulator for the web, for use when off-line",
+                    "answer": "A piece of software that intercepts and possibly modifies requests (and responses) between a web browser and web server",
+                    "original_answer": 0,
+                    "subject": "computer_security"
+                }
+            ]
+        },
+        "portability": {
+            "audio": {
+                "file": "zh-CN_test_0_common_voice_zh-CN_18598176.wav",
+                "question": "Among the provided ISO language codes, which one most accurately matches the language spoken in the audio sample?\n\nOptions:\nzh\nko\nes\nde",
+                "answer": "de"
+            }
+        }
+    },
+    {
+        "track": "Language",
+        "file": "ja_test_0_common_voice_ja_39022955.wav",
+        "original_answer": "Japanese",
+        "edited_answer": "French",
+        "reliability_question": "Listen to the audio carefully, focusing on the speech. Based on your analysis, select the language that the speaker is using from the options provided\n\nOptions:\nEnglish\nJapanese\nFrench\nGerman",
+        "generality": [
+            {
+                "file": "ja_test_0_common_voice_ja_39022955.wav",
+                "question": "Please listen to the provided audio clip and select the language spoken by the speaker from the options below. Your task is simply to choose the language that you think matches the speech.\n\nOptions:\nFrench\nEnglish\nGerman\nJapanese",
+                "answer": "French"
+            },
+            {
+                "file": "ja_test_0_common_voice_ja_21593940.wav",
+                "question": "Listen to the audio carefully, focusing on the speech. Based on your analysis, select the language that the speaker is using from the options provided\n\nOptions:\nEnglish\nJapanese\nFrench\nGerman",
+                "answer": "French"
+            },
+            {
+                "file": "ja_test_0_common_voice_ja_21593940.wav",
+                "question": "Please listen to the provided audio clip and select the language spoken by the speaker from the options below. Your task is simply to choose the language that you think matches the speech.\n\nOptions:\nFrench\nEnglish\nGerman\nJapanese",
+                "answer": "French"
+            }
+        ],
+        "locality": {
+            "audio": [
+                {
+                    "track": "Animal",
+                    "file": "hen_23.wav",
+                    "question": "From the options provided, which animal do you believe is the source of the sound in the recording?\n\nOptions:\ndog\nrooster\npig\nhen",
+                    "answer": "hen",
+                    "update": true
+                },
+                {
+                    "track": "Language",
+                    "file": "de_test_0_common_voice_de_19043449.wav",
+                    "question": "Listen to the audio segment provided and identify the language being spoken by the individual. Choose the language from the list below that best fits your perception of the speech.Which of the following languages is the speaker using in the provided audio segment?\n\nOptions:\nJapanese\nKorean\nGerman\nSpanish",
+                    "answer": "German"
+                },
+                {
+                    "track": "Language",
+                    "file": "fr_test_0_common_voice_fr_22740887.wav",
+                    "question": "Carefully listen to the provided speech clip and evaluate the language spoken by the individual. Select the answer that best represents the language used in the audio.\n\nOptions:\nSpanish\nItalian\nFrench\nChinese",
+                    "answer": "French"
+                },
+                {
+                    "track": "DynamicSuperb/AccentClassification_AccentdbExtended",
+                    "file": "telugu_s01_690.wav",
+                    "question": "The primary objective is to identify the accent present within a given speech. The answer could be american, australian, bangla, british, indian, malayalam, odiya, telugu, or welsh.",
+                    "answer": "telugu"
+                }
+            ],
+            "text": [
+                {
+                    "question": "A charged particle moves through a magnetic field and experiences a force f. New particles are sent into the same magnetic field. If the new particles have twice the charge, twice the mass, and twice the velocity, the new force would be\n\nOptions:\n4F\n2F\nF\n1/2 F",
+                    "answer": "4F",
+                    "original_answer": 0,
+                    "subject": "high_school_physics"
+                }
+            ]
+        },
+        "portability": {
+            "audio": {
+                "file": "ja_test_0_common_voice_ja_39022955.wav",
+                "question": "Which book from the list was originally written in the language heard in this audio?\n\nOptions:\nThe Great Gatsby\nFicciones\nThe Vegetarian\nGerminal",
+                "answer": "Germinal"
+            }
+        }
+    },
+    {
+        "track": "Animal",
+        "file": "dog_19.wav",
+        "original_answer": "dog",
+        "edited_answer": "cow",
+        "reliability_question": "Using the provided options and the audio file you’ve listened to, which animal do you think is most likely the source of the sound, considering all the characteristics and qualities you can identify in the sound?\n\nOptions:\nhen\ncrow\ndog\ncow",
+        "generality": [
+            {
+                "file": "dog_19.wav",
+                "question": "Can you select the animal from the provided options that matches the sound?\n\nOptions:\nhen\ncrow\ncow\ndog",
+                "answer": "cow"
+            },
+            {
+                "file": "dog_168.wav",
+                "question": "Using the provided options and the audio file you’ve listened to, which animal do you think is most likely the source of the sound, considering all the characteristics and qualities you can identify in the sound?\n\nOptions:\nhen\ncrow\ndog\ncow",
+                "answer": "cow"
+            },
+            {
+                "file": "dog_168.wav",
+                "question": "Can you select the animal from the provided options that matches the sound?\n\nOptions:\nhen\ncrow\ncow\ndog",
+                "answer": "cow"
+            }
+        ],
+        "locality": {
+            "audio": [
+                {
+                    "track": "Emotion",
+                    "file": "dia214_utt5.wav",
+                    "question": "Using the provided audio clip as input, how would you interpret or classify the speaker's underlying emotions?\n\nOptions:\nhappy\nangry\nsad\nfear",
+                    "answer": "happy"
+                },
+                {
+                    "track": "Animal",
+                    "file": "rooster_14.wav",
+                    "question": "Based on the options, which animal do you think is associated with the sound you hear?\n\nOptions:\ncow\nrooster\ndog\nhen",
+                    "answer": "rooster"
+                },
+                {
+                    "track": "Animal",
+                    "file": "cow_59.wav",
+                    "question": "From the audio file, which animal from the provided list do you identify as the source of the sound?\n\nOptions:\ncow\nfrog\nrooster\ncat",
+                    "answer": "cow"
+                },
+                {
+                    "track": "DynamicSuperb/PhonologicalFeatureClassification_VoxAngeles-MannerOfArticulation",
+                    "file": "ibo-008-028_11025_29106.wav",
+                    "question": "From the audio, which contains 3 phones, determine the manner of articulation of the phone in the middle. Choose one phone from the following: plosive, nasal, trill, tap/flap, fricative, affricate, approximant, lateral, glide, click, ejective, implosive, or vowel.",
+                    "answer": "approximant"
+                }
+            ],
+            "text": [
+                {
+                    "question": "In Collision A, two carts collide and bounce off each other. In Collision B, a ball sticks to a rigid rod, which begins to rotate about the combined center of mass. Which of the following statements about quantities in each collision is correct?\n\nOptions:\nCollision A: each cart experiences the same force, time of collision, and change in kinetic energy. Collision B: the ball and the rod each experience the same torque, time of collision, and change in rotational kinetic energy.\nCollision A: each cart experiences the same force, time of collision, and change in linear momentum. Collision B: the ball and the rod each experience the same torque, time of collision, and change in angular momentum.\nCollision A: each cart experiences the same force, time of collision, and change in kinetic energy. Collision B: the ball and the rod each experience the same torque, time of collision, and change in angular momentum.\nCollision A: each cart experiences the same force, time of collision, and change in velocity. Collision B: the ball and the rod each experience the same torque, time of collision, and change in angular velocity",
+                    "answer": "Collision A: each cart experiences the same force, time of collision, and change in linear momentum. Collision B: the ball and the rod each experience the same torque, time of collision, and change in angular momentum.",
+                    "original_answer": 1,
+                    "subject": "high_school_physics"
+                }
+            ]
+        },
+        "portability": {
+            "audio": {
+                "file": "dog_19.wav",
+                "question": "Taking into account the sound from the recording and the natural tendencies of this type of animal making the sound, which of the following behaviors is most representative of how it typically acts?\n\nOptions:\nClimbing trees\nChewing cud\nFlapping its wings\nJumping between branches",
+                "answer": "Chewing cud"
+            }
+        }
+    },
+    {
+        "track": "Animal",
+        "file": "crow_1.wav",
+        "original_answer": "crow",
+        "edited_answer": "sheep",
+        "reliability_question": "From the audio file, which animal from the provided list do you identify as the source of the sound?\n\nOptions:\nsheep\ncow\nfrog\ncrow",
+        "generality": [
+            {
+                "file": "crow_1.wav",
+                "question": "Can you select the animal from the provided options that matches the sound?\n\nOptions:\ncow\nsheep\ncrow\nfrog",
+                "answer": "sheep"
+            },
+            {
+                "file": "crow_25.wav",
+                "question": "From the audio file, which animal from the provided list do you identify as the source of the sound?\n\nOptions:\nsheep\ncow\nfrog\ncrow",
+                "answer": "sheep"
+            },
+            {
+                "file": "crow_25.wav",
+                "question": "Can you select the animal from the provided options that matches the sound?\n\nOptions:\ncow\nsheep\ncrow\nfrog",
+                "answer": "sheep"
+            }
+        ],
+        "locality": {
+            "audio": [
+                {
+                    "track": "Language",
+                    "file": "fr_test_0_common_voice_fr_19720135.wav",
+                    "question": "The audio contains a short speech segment spoken in a specific language. Your task is to analyze the audio and determine which of the following languages the speaker is using.\n\nOptions:\nItalian\nEnglish\nJapanese\nFrench",
+                    "answer": "French"
+                },
+                {
+                    "track": "Animal",
+                    "file": "cow_48.wav",
+                    "question": "Given the audio file you’ve listened to and the list of options provided, which animal do you think is the most likely match for the sound?\n\nOptions:\nsheep\ncow\nrooster\nhen",
+                    "answer": "cow"
+                },
+                {
+                    "track": "Animal",
+                    "file": "sheep_42.wav",
+                    "question": "From the following list of animals, which one do you think is most likely to be the source of the sound captured in the provided audio file, based on the characteristics and tone of the sound you hear?\n\nOptions:\nhen\ncat\nsheep\nfrog",
+                    "answer": "sheep"
+                },
+                {
+                    "track": "DynamicSuperb/HumanNonSpeechSoundRecognition_Nonspeech7k-test_CommonVoice-DeltaSegment-15",
+                    "file": "127005-1_2_0.wav",
+                    "question": "Concentrate solely on the non-speech sounds in the audio clip and classify them, disregarding any speech. The available sounds are breath, cough, cry, laugh, scream, sneeze, and yawn.",
+                    "answer": "crying"
+                }
+            ],
+            "text": [
+                {
+                    "question": "What are the effects of globalisation on food security?\n\nOptions:\nWealthy countries subsidies and trade barriers make it difficult for developing countries to take advantage of the potential of globalisation for advancing food security.\nWorld Trade Organisation rules do not cover agriculture, so globalisation really has no bearing on food security.\nSupermarkets are so far the only way in which food and agriculture have experienced globalisation.\nDeveloping countries need to create publicly-owned food reserves in order to realise the potential benefits.",
+                    "answer": "Wealthy countries subsidies and trade barriers make it difficult for developing countries to take advantage of the potential of globalisation for advancing food security.",
+                    "original_answer": 0,
+                    "subject": "nutrition"
+                }
+            ]
+        },
+        "portability": {
+            "audio": {
+                "file": "crow_1.wav",
+                "question": "Based on the sound in the recording, which of the listed vocalizations is most similar to the one made by the animal in the recording?\n\nOptions:\nMooing\nBleating\nClucking\nBarking",
+                "answer": "Bleating"
+            }
+        }
+    },
+    {
+        "track": "Animal",
+        "file": "pig_29.wav",
+        "original_answer": "pig",
+        "edited_answer": "frog",
+        "reliability_question": "From the following list of animals, which one do you think is most likely to be the source of the sound captured in the provided audio file, based on the characteristics and tone of the sound you hear?\n\nOptions:\nhen\npig\nrooster\nfrog",
+        "generality": [
+            {
+                "file": "pig_29.wav",
+                "question": "Identify the animal most likely responsible for the sound in this audio clip and choose the most likely one from the options.\n\nOptions:\nfrog\nrooster\npig\nhen",
+                "answer": "frog"
+            },
+            {
+                "file": "pig_7.wav",
+                "question": "From the following list of animals, which one do you think is most likely to be the source of the sound captured in the provided audio file, based on the characteristics and tone of the sound you hear?\n\nOptions:\nhen\npig\nrooster\nfrog",
+                "answer": "frog"
+            },
+            {
+                "file": "pig_7.wav",
+                "question": "Identify the animal most likely responsible for the sound in this audio clip and choose the most likely one from the options.\n\nOptions:\nfrog\nrooster\npig\nhen",
+                "answer": "frog"
+            }
+        ],
+        "locality": {
+            "audio": [
+                {
+                    "track": "Language",
+                    "file": "it_test_0_common_voice_it_20066528.wav",
+                    "question": "Determine the language of the provided speech.\n\nOptions:\nChinese\nFrench\nSpanish\nItalian",
+                    "answer": "Italian"
+                },
+                {
+                    "track": "Animal",
+                    "file": "hen_6.wav",
+                    "question": "Out of the animals listed below, can you identify the one that most closely matches the sound in the provided audio recording based on its auditory characteristics?\n\nOptions:\nsheep\nhen\ndog\nrooster",
+                    "answer": "hen"
+                },
+                {
+                    "track": "Animal",
+                    "file": "frog_51.wav",
+                    "question": "Out of the animals listed below, can you identify the one that most closely matches the sound in the provided audio recording based on its auditory characteristics?\n\nOptions:\ncat\nfrog\ndog\nhen",
+                    "answer": "frog"
+                },
+                {
+                    "track": "DynamicSuperb/HEARMusicGenreClassification_ISMIR04",
+                    "file": "10-dreaming_of_this.wav",
+                    "question": "Examine the musical elements to determine the genre classification of this audio. Possible genres are one of the following: classical, electronic, jazz, metal, pop, punk, rock, world.",
+                    "answer": "electronic"
+                }
+            ],
+            "text": [
+                {
+                    "question": "Which vitamins are important in lowering circulating homocysteine levels\n\nOptions:\nVitamin D\nVitamin C\nVitamin A\nFolate, vitamins B6 and B12",
+                    "answer": "Folate, vitamins B6 and B12",
+                    "original_answer": 3,
+                    "subject": "nutrition"
+                }
+            ]
+        },
+        "portability": {
+            "audio": {
+                "file": "pig_29.wav",
+                "question": "From the listed locomotion types, which one matches the typical movement of the animal in the sound?\n\nOptions:\nSlithering\nRunning\nHopping\nFlying",
+                "answer": "Hopping"
+            }
+        }
+    },
+    {
+        "track": "Emotion",
+        "file": "1086_WSI_ANG_XX.wav",
+        "original_answer": "angry",
+        "edited_answer": "disgust",
+        "reliability_question": "What emotional tone or feeling is conveyed by the speaker in the given audio file based on their vocal cues?\n\nOptions:\nangry\nhappy\nsad\ndisgust",
+        "generality": [
+            {
+                "file": "1086_WSI_ANG_XX.wav",
+                "question": "What emotion is the speaker expressing in the audio?\n\nOptions:\ndisgust\nsad\nhappy\nangry",
+                "answer": "disgust"
+            },
+            {
+                "file": "1004_ITH_ANG_XX.wav",
+                "question": "What emotional tone or feeling is conveyed by the speaker in the given audio file based on their vocal cues?\n\nOptions:\nangry\nhappy\nsad\ndisgust",
+                "answer": "disgust"
+            },
+            {
+                "file": "1004_ITH_ANG_XX.wav",
+                "question": "What emotion is the speaker expressing in the audio?\n\nOptions:\ndisgust\nsad\nhappy\nangry",
+                "answer": "disgust"
+            }
+        ],
+        "locality": {
+            "audio": [
+                {
+                    "track": "Language",
+                    "file": "de_test_0_common_voice_de_38232955.wav",
+                    "question": "Listen to the audio segment provided and identify the language being spoken by the individual. Choose the language from the list below that best fits your perception of the speech.Which of the following languages is the speaker using in the provided audio segment?\n\nOptions:\nJapanese\nItalian\nGerman\nSpanish",
+                    "answer": "German"
+                },
+                {
+                    "track": "Emotion",
+                    "file": "1069_TSI_HAP_XX.wav",
+                    "question": "What is the emotional tone of the speaker in the audio?\n\nOptions:\ndisgust\nhappy\nsad\nangry",
+                    "answer": "happy"
+                },
+                {
+                    "track": "Emotion",
+                    "file": "dia278_utt0.wav",
+                    "question": "What is the emotional tone of the speaker in the audio?\n\nOptions:\nsad\ndisgust\nhappy\nangry",
+                    "answer": "disgust"
+                },
+                {
+                    "track": "DynamicSuperb/EnvironmentalSoundClassification_ESC50-HumanAndNonSpeechSounds",
+                    "file": "2-79775-A-26.wav",
+                    "question": "Please organize the environmental sounds into categories. The answer could be crying baby, sneezing, clapping, breathing, coughing, footsteps, laughing, brushing teeth, snoring, or drinking or sipping.",
+                    "answer": "laughing"
+                }
+            ],
+            "text": [
+                {
+                    "question": "From the list of oral microorganisms, which is primarily responsible for the initiation of dental caries?\n\nOptions:\nMutans streptococci\nbifidobacteria\nLactobacilli\nP. gingivalis",
+                    "answer": "Mutans streptococci",
+                    "original_answer": 0,
+                    "subject": "nutrition"
+                }
+            ]
+        },
+        "portability": {
+            "audio": {
+                "file": "1086_WSI_ANG_XX.wav",
+                "question": "Based on the emotion identified in the audio, Which social interaction would be most appropriate as a response ?\n\nOptions:\nOffer congratulations or compliments to share their happiness.\nReassure them and offer a way to move past the uncomfortable    situation.\nEncourage them to take deep breaths to relax.\nOffer a comforting hug or words of reassurance.",
+                "answer": "Reassure them and offer a way to move past the uncomfortable    situation."
+            }
+        }
+    }
+]
