@@ -2,6 +2,8 @@
 
 [![](https://img.shields.io/badge/arxiv-2510.16917-brightgreen)](https://arxiv.org/abs/2510.16917)
 
+![Overview of SAKE](figures/sake-overview.png)
+
 This is the official Github repository for the paper [SAKE: Towards Editing Auditory Attribute Knowledge of Large Audio-Language Models](https://arxiv.org/abs/2510.16917). The repository currently contains the dataset presented in the paper. More details will be added soon.
 
 ## Dataset
