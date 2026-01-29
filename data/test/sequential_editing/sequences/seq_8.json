@@ -28,8 +28,7 @@
                     "track": "Gender",
                     "file": "en_test_0_common_voice_en_39043506.wav",
                     "question": "From the provided audio recording, recognize the speaker's gender.\n\nOptions:\nMale\nFemale",
-                    "answer": "Female",
-                    "update": true
+                    "answer": "Female"
                 },
                 {
                     "track": "Animal",
@@ -163,8 +162,7 @@
                     "track": "Language",
                     "file": "en_test_0_common_voice_en_39990821.wav",
                     "question": "Listen to the audio segment provided and identify the language being spoken by the individual. Choose the language from the list below that best fits your perception of the speech.Which of the following languages is the speaker using in the provided audio segment?\n\nOptions:\nSpanish\nFrench\nEnglish\nItalian",
-                    "answer": "English",
-                    "update": true
+                    "answer": "English"
                 },
                 {
                     "track": "Language",
@@ -231,8 +229,7 @@
                     "track": "Emotion",
                     "file": "1091_MTI_HAP_XX.wav",
                     "question": "Considering a provided audio clip, can you determine the emotional state expressed by the speaker in the recording?\n\nOptions:\nangry\nsad\nhappy\nfear",
-                    "answer": "happy",
-                    "update": true
+                    "answer": "happy"
                 },
                 {
                     "track": "Emotion",
@@ -360,8 +357,7 @@
                     "track": "Animal",
                     "file": "hen_23.wav",
                     "question": "From the options provided, which animal do you believe is the source of the sound in the recording?\n\nOptions:\ndog\nrooster\npig\nhen",
-                    "answer": "hen",
-                    "update": true
+                    "answer": "hen"
                 },
                 {
                     "track": "Language",

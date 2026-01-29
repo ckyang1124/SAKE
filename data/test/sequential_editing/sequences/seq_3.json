@@ -28,8 +28,7 @@
                     "track": "Animal",
                     "file": "crow_5.wav",
                     "question": "From the options provided, which animal do you believe is the source of the sound in the recording?\n\nOptions:\npig\ndog\ncrow\ncow",
-                    "answer": "crow",
-                    "update": true
+                    "answer": "crow"
                 },
                 {
                     "track": "Gender",
@@ -96,8 +95,7 @@
                     "track": "Animal",
                     "file": "cow_53.wav",
                     "question": "Using the provided options and the audio file you’ve listened to, which animal do you think is most likely the source of the sound, considering all the characteristics and qualities you can identify in the sound?\n\nOptions:\ncow\ncat\ncrow\nhen",
-                    "answer": "cow",
-                    "update": true
+                    "answer": "cow"
                 },
                 {
                     "track": "Animal",
@@ -231,8 +229,7 @@
                     "track": "Emotion",
                     "file": "dia196_utt0.wav",
                     "question": "What emotion is the speaker expressing in the audio?\n\nOptions:\nfear\ndisgust\nsad\nangry",
-                    "answer": "angry",
-                    "update": true
+                    "answer": "angry"
                 },
                 {
                     "track": "Emotion",

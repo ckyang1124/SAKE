@@ -34,8 +34,7 @@
                     "track": "Language",
                     "file": "en_test_0_common_voice_en_19562559.wav",
                     "question": "Listen to the speech segment, and choose the language spoken by the speaker.\n\nOptions:\nChinese\nGerman\nSpanish\nEnglish",
-                    "answer": "English",
-                    "update": true
+                    "answer": "English"
                 },
                 {
                     "track": "Language",
@@ -96,8 +95,7 @@
                     "track": "Gender",
                     "file": "en_test_0_common_voice_en_21367755.wav",
                     "question": "From the provided audio recording, recognize the speaker's gender.\n\nOptions:\nMale\nFemale",
-                    "answer": "Female",
-                    "update": true
+                    "answer": "Female"
                 },
                 {
                     "track": "Emotion",
@@ -170,8 +168,7 @@
                     "track": "Animal",
                     "file": "hen_31.wav",
                     "question": "Out of the provided options, which animal do you think is responsible for the sound captured in the provided audio recording?\n\nOptions:\nhen\ndog\ncow\ncrow",
-                    "answer": "hen",
-                    "update": true
+                    "answer": "hen"
                 },
                 {
                     "track": "Animal",
@@ -299,8 +296,7 @@
                     "track": "Gender",
                     "file": "en_test_0_common_voice_en_19984718.wav",
                     "question": "Identify the speaker's gender.\n\nOptions:\nMale\nFemale",
-                    "answer": "Female",
-                    "update": true
+                    "answer": "Female"
                 },
                 {
                     "track": "Animal",

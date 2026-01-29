@@ -95,15 +95,13 @@
                     "track": "Emotion",
                     "file": "dia205_utt3.wav",
                     "question": "What is the emotional tone of the speaker in the audio?\n\nOptions:\nfear\nsad\nhappy\nangry",
-                    "answer": "fear",
-                    "update": true
+                    "answer": "fear"
                 },
                 {
                     "track": "Animal",
                     "file": "crow_9.wav",
                     "question": "Based on the options, which animal do you think is associated with the sound you hear?\n\nOptions:\nhen\ncrow\ncat\nrooster",
-                    "answer": "crow",
-                    "update": true
+                    "answer": "crow"
                 },
                 {
                     "track": "Animal",
@@ -164,8 +162,7 @@
                     "track": "Language",
                     "file": "es_test_0_common_voice_es_19602665.wav",
                     "question": "Listen to the audio carefully, focusing on the speech. Based on your analysis, select the language that the speaker is using from the options provided\n\nOptions:\nKorean\nItalian\nChinese\nSpanish",
-                    "answer": "Spanish",
-                    "update": true
+                    "answer": "Spanish"
                 },
                 {
                     "track": "Animal",
@@ -232,8 +229,7 @@
                     "track": "Animal",
                     "file": "cat_88.wav",
                     "question": "From the following list of animals, which one do you think is most likely to be the source of the sound captured in the provided audio file, based on the characteristics and tone of the sound you hear?\n\nOptions:\ncat\nrooster\ncow\nfrog",
-                    "answer": "cat",
-                    "update": true
+                    "answer": "cat"
                 },
                 {
                     "track": "Gender",
@@ -294,8 +290,7 @@
                     "track": "Emotion",
                     "file": "1084_TAI_HAP_XX.wav",
                     "question": "How does the speaker feel in the recording?\n\nOptions:\nfear\nangry\nsad\nhappy",
-                    "answer": "happy",
-                    "update": true
+                    "answer": "happy"
                 },
                 {
                     "track": "Language",

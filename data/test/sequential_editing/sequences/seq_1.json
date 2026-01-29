@@ -95,15 +95,13 @@
                     "track": "Language",
                     "file": "fr_test_0_common_voice_fr_24533969.wav",
                     "question": "Listen to the audio carefully, focusing on the speech. Based on your analysis, select the language that the speaker is using from the options provided\n\nOptions:\nEnglish\nSpanish\nGerman\nFrench",
-                    "answer": "French",
-                    "update": true
+                    "answer": "French"
                 },
                 {
                     "track": "Emotion",
                     "file": "1069_TSI_HAP_XX.wav",
                     "question": "What is the emotional tone of the speaker in the audio?\n\nOptions:\ndisgust\nhappy\nsad\nangry",
-                    "answer": "happy",
-                    "update": true
+                    "answer": "happy"
                 },
                 {
                     "track": "Emotion",
@@ -164,8 +162,7 @@
                     "track": "Gender",
                     "file": "en_test_0_common_voice_en_24740861.wav",
                     "question": "Please identify the gender of the speaker.\n\nOptions:\nFemale\nMale",
-                    "answer": "Male",
-                    "update": true
+                    "answer": "Male"
                 },
                 {
                     "track": "Emotion",
@@ -366,8 +363,7 @@
                     "track": "Animal",
                     "file": "frog_42.wav",
                     "question": "From the following list of animals, which one do you think is most likely to be the source of the sound captured in the provided audio file, based on the characteristics and tone of the sound you hear?\n\nOptions:\ncrow\nfrog\npig\nhen",
-                    "answer": "frog",
-                    "update": true
+                    "answer": "frog"
                 },
                 {
                     "track": "Animal",
@@ -434,8 +430,7 @@
                     "track": "Language",
                     "file": "de_test_0_common_voice_de_19777557.wav",
                     "question": "Carefully listen to the provided speech clip and evaluate the language spoken by the individual. Select the answer that best represents the language used in the audio.\n\nOptions:\nKorean\nChinese\nGerman\nJapanese",
-                    "answer": "German",
-                    "update": true
+                    "answer": "German"
                 },
                 {
                     "track": "Language",

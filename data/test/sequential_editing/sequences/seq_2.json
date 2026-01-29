@@ -101,8 +101,7 @@
                     "track": "Language",
                     "file": "es_test_0_common_voice_es_19695154.wav",
                     "question": "Listen to the audio carefully, focusing on the speech. Based on your analysis, select the language that the speaker is using from the options provided\n\nOptions:\nSpanish\nItalian\nKorean\nEnglish",
-                    "answer": "Spanish",
-                    "update": true
+                    "answer": "Spanish"
                 },
                 {
                     "track": "Language",
@@ -169,8 +168,7 @@
                     "track": "Animal",
                     "file": "rooster_11.wav",
                     "question": "Can you select the animal from the provided options that matches the sound?\n\nOptions:\nfrog\nrooster\ncrow\nsheep",
-                    "answer": "rooster",
-                    "update": true
+                    "answer": "rooster"
                 },
                 {
                     "track": "Animal",

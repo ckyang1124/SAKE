@@ -235,8 +235,7 @@
                     "track": "Animal",
                     "file": "frog_42.wav",
                     "question": "Can you select the animal from the provided options that matches the sound?\n\nOptions:\nsheep\npig\nfrog\ncrow",
-                    "answer": "frog",
-                    "update": true
+                    "answer": "frog"
                 },
                 {
                     "track": "Animal",
@@ -498,8 +497,7 @@
                     "track": "Language",
                     "file": "de_test_0_common_voice_de_20283829.wav",
                     "question": "Listen to the audio carefully, focusing on the speech. Based on your analysis, select the language that the speaker is using from the options provided\n\nOptions:\nChinese\nSpanish\nGerman\nEnglish",
-                    "answer": "German",
-                    "update": true
+                    "answer": "German"
                 },
                 {
                     "track": "Gender",
@@ -560,8 +558,7 @@
                     "track": "Language",
                     "file": "es_test_0_common_voice_es_27062049.wav",
                     "question": "Determine the language of the provided speech.\n\nOptions:\nChinese\nGerman\nSpanish\nJapanese",
-                    "answer": "Spanish",
-                    "update": true
+                    "answer": "Spanish"
                 },
                 {
                     "track": "Animal",

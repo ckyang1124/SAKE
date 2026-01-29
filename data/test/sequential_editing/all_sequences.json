@@ -35,8 +35,7 @@
                         "track": "Animal",
                         "file": "frog_65.wav",
                         "question": "Identify the animal most likely responsible for the sound in this audio clip and choose the most likely one from the options.\n\nOptions:\ndog\npig\nfrog\ncat",
-                        "answer": "frog",
-                        "update": true
+                        "answer": "frog"
                     },
                     {
                         "track": "Animal",
@@ -164,8 +163,7 @@
                         "track": "Gender",
                         "file": "en_test_0_common_voice_en_22346515.wav",
                         "question": "Determine the speaker’s gender in this audio recording. Pay attention to vocal characteristics that might help in categorizing the speaker into one of these two options. Select your choice from the following options.\n\nOptions:\nMale\nFemale",
-                        "answer": "Male",
-                        "update": true
+                        "answer": "Male"
                     },
                     {
                         "track": "Animal",
@@ -232,8 +230,7 @@
                         "track": "Gender",
                         "file": "en_test_0_common_voice_en_23846478.wav",
                         "question": "From the provided audio recording, recognize the speaker's gender.\n\nOptions:\nMale\nFemale",
-                        "answer": "Male",
-                        "update": true
+                        "answer": "Male"
                     },
                     {
                         "track": "Animal",
@@ -300,8 +297,7 @@
                         "track": "Gender",
                         "file": "en_test_0_common_voice_en_39578635.wav",
                         "question": "Listen carefully to the provided audio clip and identify the gender of the speaker. Select the option that best represents the speaker’s gender based on your perception.\n\nOptions:\nFemale\nMale",
-                        "answer": "Male",
-                        "update": true
+                        "answer": "Male"
                     },
                     {
                         "track": "Language",
@@ -766,15 +762,13 @@
                         "track": "Language",
                         "file": "fr_test_0_common_voice_fr_24533969.wav",
                         "question": "Listen to the audio carefully, focusing on the speech. Based on your analysis, select the language that the speaker is using from the options provided\n\nOptions:\nEnglish\nSpanish\nGerman\nFrench",
-                        "answer": "French",
-                        "update": true
+                        "answer": "French"
                     },
                     {
                         "track": "Emotion",
                         "file": "1069_TSI_HAP_XX.wav",
                         "question": "What is the emotional tone of the speaker in the audio?\n\nOptions:\ndisgust\nhappy\nsad\nangry",
-                        "answer": "happy",
-                        "update": true
+                        "answer": "happy"
                     },
                     {
                         "track": "Emotion",
@@ -835,8 +829,7 @@
                         "track": "Gender",
                         "file": "en_test_0_common_voice_en_24740861.wav",
                         "question": "Please identify the gender of the speaker.\n\nOptions:\nFemale\nMale",
-                        "answer": "Male",
-                        "update": true
+                        "answer": "Male"
                     },
                     {
                         "track": "Emotion",
@@ -1037,8 +1030,7 @@
                         "track": "Animal",
                         "file": "frog_42.wav",
                         "question": "From the following list of animals, which one do you think is most likely to be the source of the sound captured in the provided audio file, based on the characteristics and tone of the sound you hear?\n\nOptions:\ncrow\nfrog\npig\nhen",
-                        "answer": "frog",
-                        "update": true
+                        "answer": "frog"
                     },
                     {
                         "track": "Animal",
@@ -1105,8 +1097,7 @@
                         "track": "Language",
                         "file": "de_test_0_common_voice_de_19777557.wav",
                         "question": "Carefully listen to the provided speech clip and evaluate the language spoken by the individual. Select the answer that best represents the language used in the audio.\n\nOptions:\nKorean\nChinese\nGerman\nJapanese",
-                        "answer": "German",
-                        "update": true
+                        "answer": "German"
                     },
                     {
                         "track": "Language",
@@ -1443,8 +1434,7 @@
                         "track": "Language",
                         "file": "es_test_0_common_voice_es_19695154.wav",
                         "question": "Listen to the audio carefully, focusing on the speech. Based on your analysis, select the language that the speaker is using from the options provided\n\nOptions:\nSpanish\nItalian\nKorean\nEnglish",
-                        "answer": "Spanish",
-                        "update": true
+                        "answer": "Spanish"
                     },
                     {
                         "track": "Language",
@@ -1511,8 +1501,7 @@
                         "track": "Animal",
                         "file": "rooster_11.wav",
                         "question": "Can you select the animal from the provided options that matches the sound?\n\nOptions:\nfrog\nrooster\ncrow\nsheep",
-                        "answer": "rooster",
-                        "update": true
+                        "answer": "rooster"
                     },
                     {
                         "track": "Animal",
@@ -2038,8 +2027,7 @@
                         "track": "Animal",
                         "file": "crow_5.wav",
                         "question": "From the options provided, which animal do you believe is the source of the sound in the recording?\n\nOptions:\npig\ndog\ncrow\ncow",
-                        "answer": "crow",
-                        "update": true
+                        "answer": "crow"
                     },
                     {
                         "track": "Gender",
@@ -2106,8 +2094,7 @@
                         "track": "Animal",
                         "file": "cow_53.wav",
                         "question": "Using the provided options and the audio file you’ve listened to, which animal do you think is most likely the source of the sound, considering all the characteristics and qualities you can identify in the sound?\n\nOptions:\ncow\ncat\ncrow\nhen",
-                        "answer": "cow",
-                        "update": true
+                        "answer": "cow"
                     },
                     {
                         "track": "Animal",
@@ -2241,8 +2228,7 @@
                         "track": "Emotion",
                         "file": "dia196_utt0.wav",
                         "question": "What emotion is the speaker expressing in the audio?\n\nOptions:\nfear\ndisgust\nsad\nangry",
-                        "answer": "angry",
-                        "update": true
+                        "answer": "angry"
                     },
                     {
                         "track": "Emotion",
@@ -2914,8 +2900,7 @@
                         "track": "Animal",
                         "file": "frog_42.wav",
                         "question": "Can you select the animal from the provided options that matches the sound?\n\nOptions:\nsheep\npig\nfrog\ncrow",
-                        "answer": "frog",
-                        "update": true
+                        "answer": "frog"
                     },
                     {
                         "track": "Animal",
@@ -3177,8 +3162,7 @@
                         "track": "Language",
                         "file": "de_test_0_common_voice_de_20283829.wav",
                         "question": "Listen to the audio carefully, focusing on the speech. Based on your analysis, select the language that the speaker is using from the options provided\n\nOptions:\nChinese\nSpanish\nGerman\nEnglish",
-                        "answer": "German",
-                        "update": true
+                        "answer": "German"
                     },
                     {
                         "track": "Gender",
@@ -3239,8 +3223,7 @@
                         "track": "Language",
                         "file": "es_test_0_common_voice_es_27062049.wav",
                         "question": "Determine the language of the provided speech.\n\nOptions:\nChinese\nGerman\nSpanish\nJapanese",
-                        "answer": "Spanish",
-                        "update": true
+                        "answer": "Spanish"
                     },
                     {
                         "track": "Animal",
@@ -3382,8 +3365,7 @@
                         "track": "Language",
                         "file": "en_test_0_common_voice_en_19562559.wav",
                         "question": "Listen to the speech segment, and choose the language spoken by the speaker.\n\nOptions:\nChinese\nGerman\nSpanish\nEnglish",
-                        "answer": "English",
-                        "update": true
+                        "answer": "English"
                     },
                     {
                         "track": "Language",
@@ -3444,8 +3426,7 @@
                         "track": "Gender",
                         "file": "en_test_0_common_voice_en_21367755.wav",
                         "question": "From the provided audio recording, recognize the speaker's gender.\n\nOptions:\nMale\nFemale",
-                        "answer": "Female",
-                        "update": true
+                        "answer": "Female"
                     },
                     {
                         "track": "Emotion",
@@ -3518,8 +3499,7 @@
                         "track": "Animal",
                         "file": "hen_31.wav",
                         "question": "Out of the provided options, which animal do you think is responsible for the sound captured in the provided audio recording?\n\nOptions:\nhen\ndog\ncow\ncrow",
-                        "answer": "hen",
-                        "update": true
+                        "answer": "hen"
                     },
                     {
                         "track": "Animal",
@@ -3647,8 +3627,7 @@
                         "track": "Gender",
                         "file": "en_test_0_common_voice_en_19984718.wav",
                         "question": "Identify the speaker's gender.\n\nOptions:\nMale\nFemale",
-                        "answer": "Female",
-                        "update": true
+                        "answer": "Female"
                     },
                     {
                         "track": "Animal",
@@ -4113,15 +4092,13 @@
                         "track": "Emotion",
                         "file": "dia205_utt3.wav",
                         "question": "What is the emotional tone of the speaker in the audio?\n\nOptions:\nfear\nsad\nhappy\nangry",
-                        "answer": "fear",
-                        "update": true
+                        "answer": "fear"
                     },
                     {
                         "track": "Animal",
                         "file": "crow_9.wav",
                         "question": "Based on the options, which animal do you think is associated with the sound you hear?\n\nOptions:\nhen\ncrow\ncat\nrooster",
-                        "answer": "crow",
-                        "update": true
+                        "answer": "crow"
                     },
                     {
                         "track": "Animal",
@@ -4182,8 +4159,7 @@
                         "track": "Language",
                         "file": "es_test_0_common_voice_es_19602665.wav",
                         "question": "Listen to the audio carefully, focusing on the speech. Based on your analysis, select the language that the speaker is using from the options provided\n\nOptions:\nKorean\nItalian\nChinese\nSpanish",
-                        "answer": "Spanish",
-                        "update": true
+                        "answer": "Spanish"
                     },
                     {
                         "track": "Animal",
@@ -4250,8 +4226,7 @@
                         "track": "Animal",
                         "file": "cat_88.wav",
                         "question": "From the following list of animals, which one do you think is most likely to be the source of the sound captured in the provided audio file, based on the characteristics and tone of the sound you hear?\n\nOptions:\ncat\nrooster\ncow\nfrog",
-                        "answer": "cat",
-                        "update": true
+                        "answer": "cat"
                     },
                     {
                         "track": "Gender",
@@ -4312,8 +4287,7 @@
                         "track": "Emotion",
                         "file": "1084_TAI_HAP_XX.wav",
                         "question": "How does the speaker feel in the recording?\n\nOptions:\nfear\nangry\nsad\nhappy",
-                        "answer": "happy",
-                        "update": true
+                        "answer": "happy"
                     },
                     {
                         "track": "Language",
@@ -4717,8 +4691,7 @@
                         "track": "Language",
                         "file": "de_test_0_common_voice_de_19740814.wav",
                         "question": "The audio contains a short speech segment spoken in a specific language. Your task is to analyze the audio and determine which of the following languages the speaker is using.\n\nOptions:\nItalian\nJapanese\nSpanish\nGerman",
-                        "answer": "German",
-                        "update": true
+                        "answer": "German"
                     },
                     {
                         "track": "Gender",
@@ -4779,8 +4752,7 @@
                         "track": "Language",
                         "file": "es_test_0_common_voice_es_20302216.wav",
                         "question": "Determine the language of the provided speech.\n\nOptions:\nSpanish\nEnglish\nKorean\nGerman",
-                        "answer": "Spanish",
-                        "update": true
+                        "answer": "Spanish"
                     },
                     {
                         "track": "Emotion",
@@ -4914,8 +4886,7 @@
                         "track": "Language",
                         "file": "de_test_0_common_voice_de_19765382.wav",
                         "question": "Listen to the audio segment provided and identify the language being spoken by the individual. Choose the language from the list below that best fits your perception of the speech.Which of the following languages is the speaker using in the provided audio segment?\n\nOptions:\nFrench\nJapanese\nGerman\nChinese",
-                        "answer": "German",
-                        "update": true
+                        "answer": "German"
                     },
                     {
                         "track": "Animal",
@@ -5122,8 +5093,7 @@
                         "track": "Animal",
                         "file": "cat_40.wav",
                         "question": "Out of the animals listed below, can you identify the one that most closely matches the sound in the provided audio recording based on its auditory characteristics?\n\nOptions:\npig\ndog\ncrow\ncat",
-                        "answer": "cat",
-                        "update": true
+                        "answer": "cat"
                     },
                     {
                         "track": "Animal",
@@ -5387,8 +5357,7 @@
                         "track": "Gender",
                         "file": "en_test_0_common_voice_en_39043506.wav",
                         "question": "From the provided audio recording, recognize the speaker's gender.\n\nOptions:\nMale\nFemale",
-                        "answer": "Female",
-                        "update": true
+                        "answer": "Female"
                     },
                     {
                         "track": "Animal",
@@ -5522,8 +5491,7 @@
                         "track": "Language",
                         "file": "en_test_0_common_voice_en_39990821.wav",
                         "question": "Listen to the audio segment provided and identify the language being spoken by the individual. Choose the language from the list below that best fits your perception of the speech.Which of the following languages is the speaker using in the provided audio segment?\n\nOptions:\nSpanish\nFrench\nEnglish\nItalian",
-                        "answer": "English",
-                        "update": true
+                        "answer": "English"
                     },
                     {
                         "track": "Language",
@@ -5590,8 +5558,7 @@
                         "track": "Emotion",
                         "file": "1091_MTI_HAP_XX.wav",
                         "question": "Considering a provided audio clip, can you determine the emotional state expressed by the speaker in the recording?\n\nOptions:\nangry\nsad\nhappy\nfear",
-                        "answer": "happy",
-                        "update": true
+                        "answer": "happy"
                     },
                     {
                         "track": "Emotion",
@@ -5719,8 +5686,7 @@
                         "track": "Animal",
                         "file": "hen_23.wav",
                         "question": "From the options provided, which animal do you believe is the source of the sound in the recording?\n\nOptions:\ndog\nrooster\npig\nhen",
-                        "answer": "hen",
-                        "update": true
+                        "answer": "hen"
                     },
                     {
                         "track": "Language",
@@ -6057,15 +6023,13 @@
                         "track": "Animal",
                         "file": "frog_4.wav",
                         "question": "Can you select the animal from the provided options that matches the sound?\n\nOptions:\nfrog\ncat\ndog\ncow",
-                        "answer": "frog",
-                        "update": true
+                        "answer": "frog"
                     },
                     {
                         "track": "Language",
                         "file": "en_test_0_common_voice_en_18854899.wav",
                         "question": "From the audio provided, which language is spoken?\n\nOptions:\nSpanish\nItalian\nEnglish\nJapanese",
-                        "answer": "English",
-                        "update": true
+                        "answer": "English"
                     },
                     {
                         "track": "Language",
@@ -6126,8 +6090,7 @@
                         "track": "Gender",
                         "file": "en_test_0_common_voice_en_19562559.wav",
                         "question": "Classify the speaker's voice into one of the following gender categories.\n\nOptions:\nMale\nFemale",
-                        "answer": "Male",
-                        "update": true
+                        "answer": "Male"
                     },
                     {
                         "track": "Animal",
@@ -6328,8 +6291,7 @@
                         "track": "Animal",
                         "file": "rooster_19.wav",
                         "question": "Out of the animals listed below, can you identify the one that most closely matches the sound in the provided audio recording based on its auditory characteristics?\n\nOptions:\ncat\nfrog\npig\nrooster",
-                        "answer": "rooster",
-                        "update": true
+                        "answer": "rooster"
                     },
                     {
                         "track": "Animal",

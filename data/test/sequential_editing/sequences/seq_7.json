@@ -28,8 +28,7 @@
                     "track": "Language",
                     "file": "de_test_0_common_voice_de_19740814.wav",
                     "question": "The audio contains a short speech segment spoken in a specific language. Your task is to analyze the audio and determine which of the following languages the speaker is using.\n\nOptions:\nItalian\nJapanese\nSpanish\nGerman",
-                    "answer": "German",
-                    "update": true
+                    "answer": "German"
                 },
                 {
                     "track": "Gender",
@@ -90,8 +89,7 @@
                     "track": "Language",
                     "file": "es_test_0_common_voice_es_20302216.wav",
                     "question": "Determine the language of the provided speech.\n\nOptions:\nSpanish\nEnglish\nKorean\nGerman",
-                    "answer": "Spanish",
-                    "update": true
+                    "answer": "Spanish"
                 },
                 {
                     "track": "Emotion",
@@ -225,8 +223,7 @@
                     "track": "Language",
                     "file": "de_test_0_common_voice_de_19765382.wav",
                     "question": "Listen to the audio segment provided and identify the language being spoken by the individual. Choose the language from the list below that best fits your perception of the speech.Which of the following languages is the speaker using in the provided audio segment?\n\nOptions:\nFrench\nJapanese\nGerman\nChinese",
-                    "answer": "German",
-                    "update": true
+                    "answer": "German"
                 },
                 {
                     "track": "Animal",
@@ -433,8 +430,7 @@
                     "track": "Animal",
                     "file": "cat_40.wav",
                     "question": "Out of the animals listed below, can you identify the one that most closely matches the sound in the provided audio recording based on its auditory characteristics?\n\nOptions:\npig\ndog\ncrow\ncat",
-                    "answer": "cat",
-                    "update": true
+                    "answer": "cat"
                 },
                 {
                     "track": "Animal",

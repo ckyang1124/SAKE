@@ -34,8 +34,7 @@
                     "track": "Animal",
                     "file": "frog_65.wav",
                     "question": "Identify the animal most likely responsible for the sound in this audio clip and choose the most likely one from the options.\n\nOptions:\ndog\npig\nfrog\ncat",
-                    "answer": "frog",
-                    "update": true
+                    "answer": "frog"
                 },
                 {
                     "track": "Animal",
@@ -163,8 +162,7 @@
                     "track": "Gender",
                     "file": "en_test_0_common_voice_en_22346515.wav",
                     "question": "Determine the speaker’s gender in this audio recording. Pay attention to vocal characteristics that might help in categorizing the speaker into one of these two options. Select your choice from the following options.\n\nOptions:\nMale\nFemale",
-                    "answer": "Male",
-                    "update": true
+                    "answer": "Male"
                 },
                 {
                     "track": "Animal",
@@ -231,8 +229,7 @@
                     "track": "Gender",
                     "file": "en_test_0_common_voice_en_23846478.wav",
                     "question": "From the provided audio recording, recognize the speaker's gender.\n\nOptions:\nMale\nFemale",
-                    "answer": "Male",
-                    "update": true
+                    "answer": "Male"
                 },
                 {
                     "track": "Animal",
@@ -299,8 +296,7 @@
                     "track": "Gender",
                     "file": "en_test_0_common_voice_en_39578635.wav",
                     "question": "Listen carefully to the provided audio clip and identify the gender of the speaker. Select the option that best represents the speaker’s gender based on your perception.\n\nOptions:\nFemale\nMale",
-                    "answer": "Male",
-                    "update": true
+                    "answer": "Male"
                 },
                 {
                     "track": "Language",
