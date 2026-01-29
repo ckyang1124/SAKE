@@ -142,6 +142,6 @@ def dynamic_superb():
 
 
 if __name__ == "__main__":
-    for func in [dynamic_superb]:
+    for func in [animal, emotion, common_voice, dynamic_superb]:
         print(f"Processing {func.__name__}...")
         func()
