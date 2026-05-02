@@ -1,0 +1,2076 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "arrayShape": "cr:arrayShape",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "containedIn": "cr:containedIn",
+    "cr": "http://mlcommons.org/croissant/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataBiases": "cr:dataBiases",
+    "dataCollection": "cr:dataCollection",
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isArray": "cr:isArray",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "personalSensitiveInformation": "cr:personalSensitiveInformation",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@type": "sc:Dataset",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "repo",
+      "name": "repo",
+      "description": "The Hugging Face git repository.",
+      "contentUrl": "https://huggingface.co/datasets/sake-lalm/SAKE/tree/refs%2Fconvert%2Fparquet",
+      "encodingFormat": "git+https",
+      "sha256": "https://github.com/mlcommons/croissant/issues/80"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-sequential-test",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "sequential-test/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-single-test",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "single-test/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-train",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "train/*/*.parquet"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "parquet-files-for-config-val",
+      "containedIn": {
+        "@id": "repo"
+      },
+      "encodingFormat": "application/x-parquet",
+      "includes": "val/*/*.parquet"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "sequential-test_splits/split_name"
+      },
+      "@id": "sequential-test_splits",
+      "name": "sequential-test_splits",
+      "description": "Splits for the sequential-test config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "sequential-test_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "sequential-test_splits/split_name": "test"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "sequential-test",
+      "description": "sake-lalm/SAKE - 'sequential-test' subset",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "sequential-test/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-sequential-test"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "sequential\\-test/(?:partial-)?(test)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "sequential-test_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "sequential-test/sequences",
+          "subField": [
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/file",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "file"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/original_label",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "original_label"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/edited_label",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "edited_label"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/reliability_file",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "reliability_file"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/reliability_question",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "reliability_question"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/reliability_answer",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "reliability_answer"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/t-gen_file",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['t-gen_file']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/t-gen_question",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['t-gen_question']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/t-gen_answer",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['t-gen_answer']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/a-gen_file",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['a-gen_file']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/a-gen_question",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['a-gen_question']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/a-gen_answer",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['a-gen_answer']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/ta-gen_file",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['ta-gen_file']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/ta-gen_question",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['ta-gen_question']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/ta-gen_answer",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['ta-gen_answer']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/inter-loc_file",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['inter-loc_file']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/inter-loc_question",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['inter-loc_question']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/inter-loc_answer",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['inter-loc_answer']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/intra-loc_file",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['intra-loc_file']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/intra-loc_question",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['intra-loc_question']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/intra-loc_answer",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['intra-loc_answer']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/tgt-loc_file",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['tgt-loc_file']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/tgt-loc_question",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['tgt-loc_question']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/tgt-loc_answer",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['tgt-loc_answer']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/cap-loc_file",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['cap-loc_file']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/cap-loc_question",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['cap-loc_question']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/cap-loc_answer",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['cap-loc_answer']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/text-loc_question",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['text-loc_question']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/text-loc_answer",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "['text-loc_answer']"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/portability_file",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "portability_file"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/portability_question",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "portability_question"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "sequential-test/sequences/portability_answer",
+              "dataType": "sc:Text",
+              "source": {
+                "fileSet": {
+                  "@id": "parquet-files-for-config-sequential-test"
+                },
+                "extract": {
+                  "column": "sequences"
+                },
+                "transform": {
+                  "jsonPath": "portability_answer"
+                }
+              }
+            }
+          ],
+          "isArray": true,
+          "arrayShape": "-1"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "single-test_splits/split_name"
+      },
+      "@id": "single-test_splits",
+      "name": "single-test_splits",
+      "description": "Splits for the single-test config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "single-test_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "single-test_splits/split_name": "test"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "single-test",
+      "description": "sake-lalm/SAKE - 'single-test' subset",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "single\\-test/(?:partial-)?(test)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "single-test_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/original_label",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "original_label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/edited_label",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "edited_label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/reliability_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "reliability_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/reliability_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "reliability_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/reliability_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "reliability_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/t-gen_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "t-gen_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/t-gen_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "t-gen_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/t-gen_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "t-gen_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/a-gen_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "a-gen_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/a-gen_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "a-gen_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/a-gen_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "a-gen_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/ta-gen_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "ta-gen_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/ta-gen_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "ta-gen_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/ta-gen_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "ta-gen_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/inter-loc_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "inter-loc_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/inter-loc_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "inter-loc_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/inter-loc_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "inter-loc_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/intra-loc_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "intra-loc_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/intra-loc_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "intra-loc_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/intra-loc_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "intra-loc_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/tgt-loc_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "tgt-loc_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/tgt-loc_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "tgt-loc_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/tgt-loc_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "tgt-loc_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/cap-loc_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "cap-loc_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/cap-loc_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "cap-loc_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/cap-loc_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "cap-loc_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/text-loc_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "text-loc_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/text-loc_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "text-loc_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/portability_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "portability_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/portability_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "portability_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "single-test/portability_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-single-test"
+            },
+            "extract": {
+              "column": "portability_answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "train_splits/split_name"
+      },
+      "@id": "train_splits",
+      "name": "train_splits",
+      "description": "Splits for the train config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "train_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "train_splits/split_name": "train"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "train",
+      "description": "sake-lalm/SAKE - 'train' subset",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "train/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "train/(?:partial-)?(train)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "train_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/original_label",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "original_label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/edited_label",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "edited_label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/reliability_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "reliability_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/reliability_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "reliability_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/reliability_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "reliability_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/t-gen_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "t-gen_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/t-gen_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "t-gen_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/t-gen_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "t-gen_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/a-gen_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "a-gen_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/a-gen_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "a-gen_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/a-gen_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "a-gen_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/ta-gen_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "ta-gen_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/ta-gen_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "ta-gen_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/ta-gen_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "ta-gen_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/inter-loc_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "inter-loc_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/inter-loc_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "inter-loc_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/inter-loc_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "inter-loc_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/intra-loc_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "intra-loc_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/intra-loc_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "intra-loc_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/intra-loc_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "intra-loc_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/tgt-loc_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "tgt-loc_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/tgt-loc_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "tgt-loc_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/tgt-loc_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "tgt-loc_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/cap-loc_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "cap-loc_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/cap-loc_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "cap-loc_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/cap-loc_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "cap-loc_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/text-loc_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "text-loc_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "train/text-loc_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-train"
+            },
+            "extract": {
+              "column": "text-loc_answer"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "dataType": "cr:Split",
+      "key": {
+        "@id": "val_splits/split_name"
+      },
+      "@id": "val_splits",
+      "name": "val_splits",
+      "description": "Splits for the val config.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "val_splits/split_name",
+          "dataType": "sc:Text"
+        }
+      ],
+      "data": [
+        {
+          "val_splits/split_name": "val"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "val",
+      "description": "sake-lalm/SAKE - 'val' subset",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "val/split",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "fileProperty": "fullpath"
+            },
+            "transform": {
+              "regex": "val/(?:partial-)?(val)/.+parquet$"
+            }
+          },
+          "references": {
+            "field": {
+              "@id": "val_splits/split_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/original_label",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "original_label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/edited_label",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "edited_label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/reliability_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "reliability_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/reliability_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "reliability_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/reliability_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "reliability_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/t-gen_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "t-gen_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/t-gen_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "t-gen_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/t-gen_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "t-gen_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/a-gen_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "a-gen_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/a-gen_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "a-gen_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/a-gen_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "a-gen_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/ta-gen_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "ta-gen_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/ta-gen_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "ta-gen_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/ta-gen_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "ta-gen_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/inter-loc_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "inter-loc_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/inter-loc_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "inter-loc_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/inter-loc_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "inter-loc_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/tgt-loc_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "tgt-loc_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/tgt-loc_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "tgt-loc_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/tgt-loc_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "tgt-loc_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/cap-loc_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "cap-loc_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/cap-loc_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "cap-loc_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/cap-loc_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "cap-loc_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/intra-loc_file",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "intra-loc_file"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/intra-loc_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "intra-loc_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/intra-loc_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "intra-loc_answer"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/text-loc_question",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "text-loc_question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "val/text-loc_answer",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "parquet-files-for-config-val"
+            },
+            "extract": {
+              "column": "text-loc_answer"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "conformsTo": "http://mlcommons.org/croissant/1.1",
+  "name": "SAKE",
+  "description": "sake-lalm/SAKE dataset hosted on Hugging Face and contributed by the HF Datasets community",
+  "alternateName": [
+    "sake-lalm/SAKE"
+  ],
+  "creator": {
+    "@type": "Organization",
+    "name": "SAKE",
+    "url": "https://huggingface.co/sake-lalm"
+  },
+  "keywords": [
+    "🇺🇸 Region: US"
+  ],
+  "url": "https://huggingface.co/datasets/sake-lalm/SAKE",
+  "rai:dataLimitations": "This dataset (SAKE) covers 24 auditory perceptual concepts spanning speech and non-speech domains, but excludes subjective properties such as pitch or loudness, as these lack broad social consensus for defining objective editing targets. The dataset adopts an application-agnostic formulation and evaluates primarily based on post-edit behavior, without requiring the base model's pre-edit prediction to be correct.",
+  "rai:dataBiases": "The audio sources in this dataset inherit the characteristic distributions of their underlying corpora. Speech and audio data are sourced from Common Voice, CREMA-D, ESC-50, and the Animal-Sound Dataset. Linguistically, the dataset only covers specific languages (English, German, Spanish, French, Italian, Chinese, Japanese, and Korean), which may lead to biased generalization capabilities of models toward uncovered languages, cultural backgrounds, or regional accents.",
+  "rai:personalSensitiveInformation": "This dataset contains the following sensitive categories: Gender and Language. It includes real speech samples labeled with auditory perceptual concepts that directly cover speaker characteristics (Male, Female) and linguistic features (English, German, Spanish, French, Italian, Chinese, Japanese, and Korean).",
+  "rai:dataUseCases": "This dataset is designed to evaluate the performance of knowledge editing methods applied to auditory perceptual knowledge within large audio-language models (LALMs). Validated use cases include comprehensively evaluating the reliability, generality, locality, and portability of knowledge editing methods under single and sequential editing scenarios. This benchmark is explicitly not validated or recommended for direct fine-tuning of production systems, nor should a single metric (e.g., high reliability) be used as proof that an editing method achieves deep knowledge updating and successfully maintains multi-hop reasoning capabilities.",
+  "rai:dataSocialImpact": "Positive impact: Provides the first comprehensive evaluation benchmark for editing auditory perceptual knowledge including fine-grained locality decomposition, and establishes that tuning the modality connector serves as a more principled foundation for future knowledge editing, helping to reduce concept entanglement and increase portability. Risks: Misuse of the dataset or editing methodologies to maliciously alter a model's auditory perception or inject biased associations; careless application of edits that induces severe intra-category knowledge entanglement, disrupts multi-hop reasoning (portability failures), or triggers semantic degeneration. Mitigation: The dataset is explicitly designated for research and evaluation purposes. Furthermore, the benchmark comprehensively documents the risks of entanglement and portability failures, explicitly advocating for modality connector tuning as a more balanced and less entanglement-prone direction for auditory-specific editing.",
+  "rai:hasSyntheticData": true,
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://mozilladatacollective.com/organization/cmfh0j9o10006ns07jq45h7xk",
+      "prov:label": "Common Voice",
+      "sc:license": "CC0-1.0"
+    },
+    {
+      "@id": "https://github.com/CheyneyComputerScience/CREMA-D",
+      "prov:label": "CREMA-D",
+      "sc:license": "ODbL"
+    },
+    {
+      "@id": "https://github.com/karolpiczak/ESC-50",
+      "prov:label": "ESC-50",
+      "sc:license": "CC BY-NC 3.0"
+    },
+    {
+      "@id": "https://github.com/YashNita/Animal-Sound-Dataset",
+      "prov:label": "Animal-Sound Dataset"
+    },
+    {
+      "@id": "https://huggingface.co/DynamicSuperb",
+      "prov:label": "Dynamic-SUPERB Phase-2"
+    },
+    {
+      "@id": "https://huggingface.co/datasets/cais/mmlu",
+      "prov:label": "MMLU",
+      "sc:license": "MIT"
+    }
+  ],
+  "prov:wasGeneratedBy": [
+    {
+      "@type": "prov:Activity",
+      "prov:type": {
+        "@id": "https://www.wikidata.org/wiki/Q4929239"
+      },
+      "prov:label": "Audio and Knowledge Source Collection",
+      "sc:description": "Audio samples and their corresponding concept labels were directly extracted from established speech and audio corpora, including Common Voice, CREMA-D, ESC-50, and the Animal-Sound Dataset. For the portability evaluation, related world knowledge attributes (e.g., animal diet, locomotion, physical traits) were systematically collected by human. Out-of-scope tasks for general auditory capability were sourced from Dynamic-SUPERB Phase-2, and textual QA pairs were sourced from MMLU."
+    },
+    {
+      "@type": "prov:Activity",
+      "prov:type": {
+        "@id": "https://www.wikidata.org/wiki/Q109719325"
+      },
+      "prov:label": "LLM-Assisted Question Generation and Target Construction",
+      "sc:description": "Textual concept recognition questions and their semantically equivalent paraphrased variations were generated using GPT-5 (gpt-5-2025-08-07). Reference answers for portability questions were constructed to ensure they are uniquely valid for the edited target concept and not applicable to the original concept."
+    },
+    {
+      "@type": "prov:Activity",
+      "prov:type": {
+        "@id": "https://www.wikidata.org/wiki/Q1172378"
+      },
+      "prov:label": "Ambiguity Filtering",
+      "sc:description": "During the construction of portability queries, questions whose reference answers were valid for both the original concept and the target concept were manually filtered out to prevent ambiguous evaluation results. Tasks from Dynamic-SUPERB Phase-2 were manually reviewed and filtered to exclude any tasks overlapping with the 24 specific concepts evaluated in the benchmark."
+    },
+    {
+      "@type": "prov:Activity",
+      "prov:type": {
+        "@id": "https://www.wikidata.org/wiki/Q3306762"
+      },
+      "prov:label": "Human Verification",
+      "sc:description": "All generated text and question-answer pairs underwent a strict four-stage verification process by a team of three human annotators. This included verifying audio-label alignment, checking text question correctness and semantic equivalence, fact-checking portability answers against reference knowledge bases (e.g., Wikipedia), and ensuring cross-annotator agreement. Only instances approved by all three annotators were included in the final dataset."
+    }
+  ],
+  "license": "CC BY 4.0"
+}
