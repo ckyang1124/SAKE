@@ -1989,7 +1989,7 @@
   ],
   "conformsTo": "http://mlcommons.org/croissant/1.1",
   "name": "SAKE",
-  "description": "sake-lalm/SAKE dataset hosted on Hugging Face and contributed by the HF Datasets community",
+  "description": "\n\t\n\t\t\n\t\tSAKE: A Comprehensive Benchmark Towards Editing Auditory Perceptual Knowledge of Large Audio-Language Models\n\t\n\nThis is the dataset for the SAKE benchmark, the first benchmark for auditory perceptual knowledge editing in LALMs. \nThe dataset is organized into four subsets: train, val, single-test, and sequential-test, which refer to the training set, validation set, single editing test set, and sequential editing test set, respectively. Each subset is stored in a separate config within… See the full description on the dataset page: https://huggingface.co/datasets/sake-lalm/SAKE.",
   "alternateName": [
     "sake-lalm/SAKE"
   ],
@@ -2072,5 +2072,5 @@
       "sc:description": "All generated text and question-answer pairs underwent a strict four-stage verification process by a team of three human annotators. This included verifying audio-label alignment, checking text question correctness and semantic equivalence, fact-checking portability answers against reference knowledge bases (e.g., Wikipedia), and ensuring cross-annotator agreement. Only instances approved by all three annotators were included in the final dataset."
     }
   ],
-  "license": "CC BY 4.0"
+  "license": "CC BY-NC 4.0"
 }
