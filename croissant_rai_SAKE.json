@@ -1989,7 +1989,7 @@
   ],
   "conformsTo": "http://mlcommons.org/croissant/1.1",
   "name": "SAKE",
-  "description": "\n\t\n\t\t\n\t\tSAKE: A Comprehensive Benchmark Towards Editing Auditory Perceptual Knowledge of Large Audio-Language Models\n\t\n\nThis is the dataset for the SAKE benchmark, the first benchmark for auditory perceptual knowledge editing in LALMs. \nThe dataset is organized into four subsets: train, val, single-test, and sequential-test, which refer to the training set, validation set, single editing test set, and sequential editing test set, respectively. Each subset is stored in a separate config within… See the full description on the dataset page: https://huggingface.co/datasets/sake-lalm/SAKE.",
+  "description": "\n\t\n\t\t\n\t\tSAKE: A Benchmark for Editing Auditory Perceptual Knowledge in Large Audio-Language Models\n\t\n\nThis is the dataset for the SAKE benchmark, the first benchmark for auditory perceptual knowledge editing in LALMs. \nThe dataset is organized into four subsets: train, val, single-test, and sequential-test, which refer to the training set, validation set, single editing test set, and sequential editing test set, respectively. Each subset is stored in a separate config within this Hugging Face… See the full description on the dataset page: https://huggingface.co/datasets/sake-lalm/SAKE.",
   "alternateName": [
     "sake-lalm/SAKE"
   ],
